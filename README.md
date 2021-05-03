@@ -5,7 +5,7 @@
 M.F. Gullu, Harran University<br/>
 K. Orakcal, Bogazici University<br/>
 
-quadRC element will be publicly available in fall 2021.
+quadRC element will be publicly available in OpenSees in fall 2021.
 
 ## Description
 
