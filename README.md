@@ -2,8 +2,8 @@
 3-D finite element model for planar RC elements
 
 [K. Kolozvari](mailto:kkolozvari@fullerton.edu), CSU Fullerton<br/>
-M.F. Gullu, Harran University
-K. Orakcal, Bogazici University
+M.F. Gullu, Harran University<br/>
+K. Orakcal, Bogazici University<br/>
 
 quadRC element will be publicly available in fall 2021.
 
