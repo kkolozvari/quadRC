@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# quadRC
+3-D finite element model for planar RC elements
 
-You can use the [editor on GitHub](https://github.com/kkolozvari/quadRC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[K. Kolozvari](mailto:kkolozvari@fullerton.edu), CSU Fullerton<br/>
+M.F. Gullu, Harran University<br/>
+K. Orakcal, Bogazici University<br/>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+quadRC element will be publicly available in fall 2021.
 
-### Markdown
+## Description
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The quadRC element (Figure 1b) is a three-dimensional element with 24 DOFs for nonlinear analysis of planar reinforced concrete (RC) elements. The element in-plane behavior is described with a four-node bilinear finite element formulation with four Gauss integration points using two translational and one rotational (drilling) DOFs (Figure 1c). The four in-plane DOFs that represent the drilling rotations normal to the plane of the element are presently implemented as “dummy” DOFs and are assigned infinitesimal stiffness values; i.e., the drilling DOFs are ignored in the present model element formulation. Material behavior at each integration point is described with the Fixed-Strut-Angle-Model (FSAM; Figure 1d-e). Out-of-plane behavior of the proposed model is simulated with a four-node elastic thin-plate finite element formulation based on the Mindlin-Reissner plate theory corresponding to one translational and two rotational DOFs (Figure 1f-g) at each node.
 
+![quadRC](https://user-images.githubusercontent.com/53920372/116842793-a1058300-ab92-11eb-94e9-2a76c2b4f7d9.PNG)
+**Figure 1. Model formulation: a) Wall segment, b) 3D four-node quadRC element, c) element in-plane DOFs, d) in-plane parent element, and e) 2D constitutive model for reinforced concrete (FSAM), f) element out-of-plane DOFs, g) plate moments**
+
+### quadRC Input
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+element quadRC eleTag iNode jNode kNode lNode thick matTag <-thickMod tMod> <-Poisson Nu> <-Density Dens>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+| parameter | description |
+|----------|------------|
+| eleTag | unique element tag|
+| iNode jNode kNode lNode | tags of element nodes defined in counterclockwise direction|
+| thick | element thicknesses|
+| matTag | material tag of nDmaterial FSAM |
+| tMod | thickness modifier for out-of-plane bending behavior (optional; default - 0.63, which is equivalent to 25% of uncracked stiffness) |
+| Nu | Poisson ratio for out-of-plane bending (optional; default = 0.25) |
+| Dens | Density (optional, default = 0.0)|
 
-### Jekyll Themes
+### Recorders
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kkolozvari/quadRC/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+In preparation
 
-### Support or Contact
+### OpenSeesPy Documentation
+   
+In preparation
+   
+## Example
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+In preparation 
+
+## References
+
+K. Kolozvari, M. F. Gullu, K. Orakcal (2021, in print). "Finite Element Modeling of Reinforced Concrete Walls under Uni- and Multi-directional Loading using OpenSees", Bulletin of Earthquake Engineering.
