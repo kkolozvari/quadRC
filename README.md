@@ -14,7 +14,7 @@ The quadRC element (Figure 1b) is a three-dimensional element with 24 DOFs for n
 ![quadRC](https://user-images.githubusercontent.com/53920372/116842793-a1058300-ab92-11eb-94e9-2a76c2b4f7d9.PNG)
 **Figure 1. Model formulation: a) Wall segment, b) 3D four-node quadRC element, c) element in-plane DOFs, d) in-plane parent element, and e) 2D constitutive model for reinforced concrete (FSAM), f) element out-of-plane DOFs, g) plate moments**
 
-### MVLEM_3D Input
+### quadRC Input
 ```markdown
 element quadRC eleTag iNode jNode kNode lNode thick matTag <-thickMod tMod> <-Poisson Nu> <-Density Dens>
 ```
