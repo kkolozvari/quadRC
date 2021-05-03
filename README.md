@@ -1,5 +1,5 @@
 # quadRC
-3-D element for flexure-dominated RC walls
+3-D finite element model for planar RC elements
 
 [K. Kolozvari](mailto:kkolozvari@fullerton.edu), CSU Fullerton<br/>
 
