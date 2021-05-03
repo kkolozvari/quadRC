@@ -3,6 +3,8 @@
 
 [K. Kolozvari](mailto:kkolozvari@fullerton.edu), CSU Fullerton<br/>
 
+quadRC element will be publicly available in fall 2021.
+
 ## Description
 
 The quadRC element (Figure 1a) is a three-dimenaional, four-node, plane-stress, FE-based element with 24 DOFs for nonlinear analysis of planar reinforced concrete (RC) elements. The element is characterized by six degrees of freedom (DOFs) per node as illustrated in Figure 1b. The element in-plane deformations are described with a four-node bilinear finite element formulation using two translational and one rotational (drilling) DOFs (Figure 1c), while the out-of-plane deformations are described with one translational and two rotational DOFs (Figure 1f) at each node, resulting in a total 24 DOFs (Figure 1a) used to describe the model element deformation field. A four-node bilinear iso-parametric quadrilateral element formulation (e.g., Cook et al., 2001) with four Gauss integration points is used for simulating the in-plane membrane behavior of the RC wall model elements, which considers eight translational in-plane DOFs at the nodes (ui, vi; Figure 1c). The remaining four in-plane DOFs that represent the drilling rotations normal to the plane of the element (zi) are presently implemented as “dummy” DOFs and are assigned infinitesimal stiffness values; i.e., the drilling DOFs are ignored in the present model element formulation. Out-of-plane behavior of the proposed model is simulated with a four-node elastic thin-plate finite element formulation based on the Mindlin-Reissner plate theory
@@ -27,16 +29,7 @@ element quadRC eleTag iNode jNode kNode lNode thick matTag <-thickMod tMod> <-Po
 
 ### Recorders
 
-The following recorders are available with the MVLEM_3D element.
-
-| recorder | description |
-|----------|------------|
-| globalForce | Element global forces|
-| Curvature | Element curvature|
-| Shear_Force_Deformation | Element shear force-deformation relationship|
-| Fiber_Strain | Vertical strains in m fibers along the cross-section|
-| Fiber_Stress_Concrete | Vertical concrete stresses in m fibers along the cross-section|
-| Fiber_Stress_Steel | Vertical steel stresses in m fibers along the cross-section|
+In preparation
 
 ### OpenSeesPy Documentation
    
